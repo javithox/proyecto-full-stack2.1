@@ -1,13 +1,32 @@
+import type { CSSProperties } from "react";
+import miLogo from '../logo-image/image-removebg-preview.png';
 
-const nombreProducto:string[]=["GPU-roja"," GPU-negra"," Silla-Gamer"," Audifonos"," Teclado-Gamer"," Pantallas"," Procesador"," fundas para mouse"]
-const precioProducto:number[]=[290000,207000,54000,35000,25000,100000,132880,5000]
+const nombretienda:string='Level-Up'
 
-export const InfoProducto=() => {
+
+const estiloTienda:CSSProperties={
+    color:'#39ff14',
+    padding:10,
+    margin:10,
+    marginTop:20,
+    fontFamily:'Arial, sans-serif',
+    textAlign:'left',
+    textShadow:'2px 2px 4px #39ff14'
+}
+
+export const InfoTienda = () => {
     return(
         <>
-            <h1>Hola Cliente!!</h1>
-            <p>Tus productos gamers</p>
-            <p>Con buenos precios</p>
+            <section className="contenedor-infoProducto">
+                <div>
+                    <h1 style={estiloTienda}>Productos</h1>
+                    <h2 style={estiloTienda}><img src={miLogo} alt="Logo" height="90px" width="90px" /> {nombretienda}</h2>
+
+                </div>
+            </section>
+                
+            
+
         </>
     )
 }
