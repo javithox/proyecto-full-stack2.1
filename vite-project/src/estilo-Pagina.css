@@ -1,0 +1,28 @@
+.body-page{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.imagen-logo{
+    border-radius: 90%;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.btn-nav{
+    text-decoration: none;
+    color:#39ff14;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+    box-shadow: #00a2ff 2px 2px 2px;
+    background-color: #00a2ff;
+    padding: 8px 16px;
+    border-radius: 8px;
+
+}
+.imagen-presentacion{
+    height: 250px;
+    width: 290px;
+}
