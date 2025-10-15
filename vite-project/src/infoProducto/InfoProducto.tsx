@@ -20,13 +20,23 @@ export const InfoTienda = () => {
     return(
         <>
             <section className="contenedor-infoProducto">
-                <div>
-                    <h1 style={estiloTienda}>Tienda Gamer </h1>
-                    <h2 style={estiloTienda}><img src={miLogo} alt="Logo" height="90px" width="90px" className="imagen-logo"/> {nombretienda}</h2>
-                    <nav>
+                <div className="contenedor-principal">
+                    <div className="contenedor-titulo">
+                        <h1 style={estiloTienda}>Tienda Gamer </h1>
+                        <h2 style={estiloTienda}><img src={miLogo} alt="Logo" height="90px" width="90px" className="imagen-logo"/> {nombretienda}</h2>
+                        <nav className="nav-0">
+                            <input type="text" id="s" value="" placeholder="Buscar"/>
+                            <input className="button-search" type="submit" value="Buscar"/>
+                            <i className="search"></i></nav>
+                    </div>
+
+                    <nav className="nav-1">
                         <a href="#" className="btn-nav">Inicio</a>
                         <a href="#" className="btn-nav">Productos</a>
                         <a href="#" className="btn-nav">Nosotros</a>
+                        <a href="#" className="btn-nav">Blog</a>
+                        <a href="#" className="btn-nav">Contacto</a>
+                        <a href="#" className="btn-nav">Carrito</a>
                     </nav>
 
                 </div>
