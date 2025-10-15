@@ -41,8 +41,8 @@ export const InfoTienda = () => {
 
                 </div>
             </section>
-            <article>
-                <div>
+            <article className="contenedor-articulo">
+                <div className="articulo">
                     <h2 style={estiloTienda}>Sobre la tienda</h2>
                     <img src="https://w0.peakpx.com/wallpaper/626/351/HD-wallpaper-level-up-gaming-cool-fun-game-level-up-next-level-play-playing-win-winner.jpg" alt="imagen level up" className="imagen-presentacion" />
                     <p style={estiloTienda}>La tienda level up gamer tiene toda clase de productos para jugadores gamers de pc de toda gama</p>
