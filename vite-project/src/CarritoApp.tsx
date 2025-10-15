@@ -3,8 +3,8 @@ import "./estilo-Pagina.css";
 
 interface CarroComprasItem{
     productName: string;
-    price:number;
-    quantity:number;
+    price?:number;
+    quantity?:number;
 }
 
 const ProductosEnCarro:CarroComprasItem[]=[

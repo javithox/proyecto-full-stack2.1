@@ -23,7 +23,7 @@ export const InfoTienda = () => {
                 <div className="contenedor-principal">
                     <div className="contenedor-titulo">
                         <h1 style={estiloTienda}>Tienda Gamer </h1>
-                        <h2 style={estiloTienda}><img src={miLogo} alt="Logo" height="90px" width="90px" className="imagen-logo"/> {nombretienda}</h2>
+                        <h2 className="titulo-logo" style={estiloTienda}><img src={miLogo} alt="Logo" height="90px" width="90px" className="imagen-logo"/> {nombretienda}</h2>
                         <nav className="nav-0">
                             <input type="text" id="s" value="" placeholder="Buscar"/>
                             <input className="button-search" type="submit" value="Buscar"/>
