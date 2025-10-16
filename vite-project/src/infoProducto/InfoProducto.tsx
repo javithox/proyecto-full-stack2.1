@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import miLogo from '../logo-image/image-removebg-preview.png';
-
+import { CarritoApp } from "../CarritoApp";
 
 
 const nombretienda:string='Level-Up'

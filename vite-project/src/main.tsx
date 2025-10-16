@@ -4,9 +4,15 @@ import { InfoTienda } from './infoProducto/InfoProducto';
 import './estilo-Pagina.css';
 import { CarritoApp } from './CarritoApp';
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <InfoTienda />
-    <CarritoApp/>
   </StrictMode>,
+)
+
+createRoot(document.getElementById('root2')!).render(
+  <StrictMode>
+    <CarritoApp/>
+  </StrictMode>
 )
