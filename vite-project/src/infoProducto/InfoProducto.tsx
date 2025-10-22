@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import miLogo from '../logo-image/image-removebg-preview.png';
-import { CarritoApp } from "../CarritoApp";
+import { CarritoApp } from "../Components/CarritoApp";
 
 
 const nombretienda:string='Level-Up'
@@ -36,7 +36,7 @@ export const InfoTienda = () => {
                         <a href="#" className="btn-nav">Nosotros</a>
                         <a href="#" className="btn-nav">Blog</a>
                         <a href="#" className="btn-nav">Contacto</a>
-                        <a href="#" className="btn-nav">Carrito</a>
+                        <a href="Carrito.html" className="btn-nav">Carrito</a>
                     </nav>
 
                 </div>

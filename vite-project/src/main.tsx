@@ -1,18 +1,11 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { InfoTienda } from './infoProducto/InfoProducto';
 import './estilo-Pagina.css';
-import { CarritoApp } from './CarritoApp';
+import { CarritoApp } from './Components/CarritoApp';
 
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <InfoTienda />
-  </StrictMode>,
-)
+const container=document.getElementById('root');
+const root =createRoot(container);
+root.render(<InfoTienda/>)
 
-createRoot(document.getElementById('root2')!).render(
-  <StrictMode>
-    <CarritoApp/>
-  </StrictMode>
-)
+
