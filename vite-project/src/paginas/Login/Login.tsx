@@ -15,16 +15,16 @@ const Login = () => {
                             <form action="#" method="post" className="p-4 border rounded bg-light shadow-sm">
                                 <div className="mb-3">
                                     <label htmlFor="username" className="form-label">Nombre de Usuario</label>
-                                    <input type="text" id="username" className="form-control" placeholder="Ingresa tu nombre de usuario" required autoComplete="username"/>
+                                    <input type="text" id="username" className="form-control1" placeholder="Ingresa tu nombre de usuario" required autoComplete="username"/>
                                 </div>
 
                                 <div className="mb-3">
                                     <label htmlFor="password" className="form-label">Contraseña</label>
-                                    <input type="password" id="password" name="password" className="form-control" placeholder="Ingresa tu Contraseña" required autoComplete="current-password"/>
+                                    <input type="password" id="password" name="password" className="form-control2" placeholder="Ingresa tu Contraseña" required autoComplete="current-password"/>
                                 </div>
 
                                 <div className="d-grid mb-3">
-                                    <button type="submit" className="btn-btn-primary"style={{backgroundColor: '#1e90ff'}}>Iniciar Sesion</button>
+                                    <button type="submit" className="btn-btn-primary"style={{backgroundColor: '#1e90ff', color:'#39ff14'}}>Iniciar Sesion</button>
                                 </div>
 
                                 <div className="text-center">
