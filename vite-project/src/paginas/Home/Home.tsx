@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../Components/Header/Header";
 import Hero from "../../Components/Hero/Hero";
 import CartaProductos from "../../Components/Carta-Productos/Carta-Productos";
-import Footer from '../../Components/Footer/Footer';
+import Footer from '../../Components/Footer/Footer.tsx';
 
 
 
