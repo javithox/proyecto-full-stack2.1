@@ -49,7 +49,7 @@ const Productos = [
         name: 'Monitores',
         attributes: 'Monitores de alta resolucion y velocidad de refresco para una mejor experiencia gamer',
         price: '$200.000',
-        image: 'https://www.lg.com/es/images/monitores/md07501703/gallery/medium01.jpg'
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc5GU3XttOVRmzYACHYVdNcPosvSQVyI0xjg&s'
     },
     {
         id:8,

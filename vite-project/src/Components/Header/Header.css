@@ -1,0 +1,31 @@
+.main-header{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+}
+.Logo{
+    display: flex;
+    height: 120px;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.main-nav{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 16.5px;
+    font-weight: bold;
+}
+.main-nav a{
+    text-decoration: none;
+    color: #39ff14;
+    text-shadow: #39ff14 2px 2px 2px;
+}
+.main-nav a:hover{
+    color: blue;
+    transition: 0.3s;
+}
