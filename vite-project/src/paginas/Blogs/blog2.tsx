@@ -20,8 +20,8 @@ const blog2 = () => {
                 </form>
                 <h3 className="titulo-otros-blogs" style={{color:'#39ff14'}}>Otro Blogs</h3>
                 <ul className="lista-blog">
-                    <li><Link to='/Blog1'>Blog1</Link></li>
-                    <li><Link to='/Blog3'>Blog3</Link></li>
+                    <li><Link className="Blog1" to='/Blog1'>Blog1</Link></li>
+                    <li><Link className="Blog3" to='/Blog3'>Blog3</Link></li>
                 </ul>
             </div>
         </main>
