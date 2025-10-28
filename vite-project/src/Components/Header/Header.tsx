@@ -12,8 +12,8 @@ const Header = () =>{
                 <Link to='/Productos'>Productos</Link>
                 <Link to='/Login' className='Login'>Login</Link>
                 <Link to='/Registrar'>Registrar</Link>
-                <Link to='#'>Nosotros</Link>
-                <Link to='#'>Blogs</Link>
+                <Link to='/Nosotros'>Nosotros</Link>
+                <Link to='/Blogs'>Blogs</Link>
                 <Link to='#'>Contacto</Link>
                 <Link to='/CarritoCompras'>Carrito</Link>
 

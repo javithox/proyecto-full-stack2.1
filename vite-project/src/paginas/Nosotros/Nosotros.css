@@ -1,0 +1,21 @@
+.titulo-nosotros{
+    color: #39ff14;
+    position: absolute;
+    top: 170px;
+}
+.parrafo1{
+    color: #39ff14;
+    position: absolute;
+    top: 330px;
+    width: 600px;
+}
+.parrafo2{
+    color: #39ff14;
+    position: absolute;
+    top: 650px;
+    width: 600px;
+}
+.imagen-nosotros{
+    position: absolute;
+    top: 450px;
+}

@@ -5,6 +5,8 @@ import Home from "./paginas/Home/Home";
 import Productos from "./paginas/Productos/Productos";
 import Login from "./paginas/Login/Login";
 import Registrar from "./paginas/Registrar/Registrar";
+import Nosotros from "./paginas/Nosotros/Nosotros";
+import Blogs from './paginas/Blogs/blog1';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { AppCarro } from "./paginas/Carrito-Compras/AppCarro";
 
@@ -19,6 +21,8 @@ function App() {
                 <Route path="/productos" element={<Productos/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/registrar" element={<Registrar/>}/>
+                <Route path="/nosotros" element={<Nosotros/>}/>
+                <Route path="/blogs" element={<Blogs/>}/>
                 <Route path="/Carrito" element={<AppCarro/>}/>
            </Routes>
            <Footer/>
