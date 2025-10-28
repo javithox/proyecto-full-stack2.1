@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../assets/logo-image/image-removebg-preview.png';
 import './Regisrtar.css'
 
 
@@ -18,17 +17,17 @@ const Registrar = () =>{
                             <form action="#" method='post' className='form-container p-4 border rounded bg-light shadow-sm'>
                                 <div className='mb-3'>
                                     <label htmlFor="username" className='form-label'>Nombre de Usuario</label>
-                                    <input type="text" id='username' className='form-control' placeholder='Ingrese su nombre de usuario' required autoComplete='username' />
+                                    <input type="text" id='username' className='form-control1' placeholder='Ingrese su nombre de usuario' required autoComplete='username' />
                                 </div>
 
                                 <div className='mb-3'>
                                     <label htmlFor="username" className='form-label'>Correo</label>
-                                    <input type="text" id='Email' className='form-control' placeholder='Ingrese su Correo' />
+                                    <input type="text" id='Email' className='form-control2' placeholder='Ingrese su Correo' />
                                 </div>
 
                                 <div className='mb-3'>
                                     <label htmlFor="password" className='form-label'>Contraseña</label>
-                                    <input type="password" id='password' name='password' className='form-control' placeholder='Ingrese su contraseña' required autoComplete='current-password' />
+                                    <input type="password" id='password' name='password' className='form-control3' placeholder='Ingrese su contraseña' required autoComplete='current-password' />
                                 </div>
 
                                 <div className='d-grid mb-3'>
