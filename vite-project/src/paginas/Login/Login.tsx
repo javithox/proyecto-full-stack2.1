@@ -1,14 +1,14 @@
 import React from "react";
-import logo from '../../assets/logo-image/image-removebg-preview.png';
+import './Login.css'
 
 const Login = () => {
     return(
         <main className="main-container">
             <section className="main-header bg-black">
-                <img src={logo} alt="logo" className="logo" height='150' width='150'/>
+                
                 <div className="contenedor-iniciar">
                     <div className="justify-content-center">
-                        <h1 style={{color:' #39ff14'}}>Iniciar Sesion</h1>
+                        <h1 className="titulo-iniciar" style={{color:' #39ff14'}}>Iniciar Sesion</h1>
                     </div>
                     <div className="row justify-content-center">
                         <div className="col-md6 col-lg-5">
@@ -28,7 +28,7 @@ const Login = () => {
                                 </div>
 
                                 <div className="text-center">
-                                    <a href="registro.html" className="text-decoration-none" style={{color:'#39ff14'}}>¿Has olvidado la contraseña?</a>
+                                    <a href="registro.html" className="texto1 text-decoration-none" style={{color:'#39ff14'}}>¿Has olvidado la contraseña?</a>
                                 </div>
                             </form>
                         </div>

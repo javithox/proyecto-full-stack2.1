@@ -6,7 +6,7 @@ import './Header.css';
 const Header = () =>{
     return(
         <header className='main-header'>
-            <img src={logo} alt="Logo" className='Logo' height='150' width='150'/>
+            <img src={logo} alt="Logo" className='Logo' height='120' width='150'/>
             <nav className='main-nav'>
                 <Link to='/'>Inicio</Link>
                 <Link to='/Productos'>Productos</Link>
@@ -15,6 +15,7 @@ const Header = () =>{
                 <Link to='#'>Nosotros</Link>
                 <Link to='#'>Blogs</Link>
                 <Link to='#'>Contacto</Link>
+                <Link to='/CarritoCompras'>Carrito</Link>
 
             </nav>
         </header>

@@ -1,5 +1,6 @@
 import React from "react";
 import CartaProductos from "../../Components/Carta-Productos/Carta-Productos";
+import { CarritoCompras } from "../Carrito-Compras/Carrito-Compras";
 
 const Productos = [
     {
@@ -71,7 +72,7 @@ const Productos = [
 const productos = () => {
     return(
         <main className="product-grid">
-            <h1>Productos</h1>
+            <h1 style={{color:'#39ff14', position:"absolute", top:'150px'}}>Productos</h1>
             <ul className="product-list">
                 {Productos.map(Productos => (
                     <li key={Productos.id} className="product-card">

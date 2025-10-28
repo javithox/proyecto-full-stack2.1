@@ -1,16 +1,28 @@
 .main-header{
     display: flex;
+    flex-direction: column;
     position: absolute;
     justify-content: space-between;
     padding: 10px 20px;
     
 }
+@media (min-width: 768px){
+    .main-header{
+        flex-direction: row;
+    }
+    .Logo{
+        flex-direction: row;
+    }
+    
+
+}
 .Logo{
     display: flex;
+    flex-direction: column;
     height: 120px;
     width: 120px;
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 10;
     align-items: center;
 }
 .main-nav{

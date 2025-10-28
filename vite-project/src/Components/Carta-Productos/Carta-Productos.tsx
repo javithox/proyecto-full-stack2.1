@@ -1,4 +1,5 @@
 import React, { type CSSProperties } from "react";
+import './Carta-producto.css'
 
 const estiloCarta:CSSProperties={
     color:'#39ff14',

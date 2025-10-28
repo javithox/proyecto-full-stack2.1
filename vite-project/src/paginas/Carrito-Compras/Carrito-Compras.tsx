@@ -1,20 +1,23 @@
 import { useState ,type CSSProperties } from "react";
 
+
 const seccionProductos:CSSProperties={
     display:"flex",
+    position:"absolute",
     alignItems:'center',
     gap:10,
-    marginTop:10
+    marginTop:10,
+    top:'400px'
 }
 
 interface Props{
-    nombreProducto:string,
-    cantidadProducto?:number,
-    precioProducto:number
+    name:string,
+    quantity?:number,
+    price:number
 };
 
-export const CarritoCompras = ({nombreProducto,cantidadProducto = 1}: Props) => {
-    const [count,setCount] = useState(cantidadProducto);
+export const CarritoCompras = ({name,quantity = 1}: Props) => {
+    const [count,setCount] = useState(quantity);
 
     const nameProduct:CSSProperties = {
         //width:150
@@ -22,7 +25,7 @@ export const CarritoCompras = ({nombreProducto,cantidadProducto = 1}: Props) => 
     };
 
     const handlerClick = ()  =>{
-        console.log(`Click en ${nombreProducto}`)
+        console.log(`Click en ${name}`);
     };
 
     const handleAdd = () => {
@@ -34,11 +37,11 @@ export const CarritoCompras = ({nombreProducto,cantidadProducto = 1}: Props) => 
     };
 
     return(
-        <section>
-            <span style={nameProduct}>{nombreProducto}</span>
-            <button onClick={handleAdd}>+1</button>
-            <span>{count}</span>
-            <button onClick={handleSubstract}>-1</button>
+        <section style={seccionProductos}>
+            <span className="span-producto" style={nameProduct}>{name}</span>
+            <button style={{backgroundColor:'#39ff14'}} onClick={handleAdd}>+1</button>
+            <span style={{color:'#39ff14'}}>{count}</span>
+            <button style={{backgroundColor:'#39ff14'}} onClick={handleSubstract}>-1</button>
         </section>
     );
 

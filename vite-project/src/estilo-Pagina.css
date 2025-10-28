@@ -1,10 +1,14 @@
 .body-page{
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     background-color: black;
     width: 100%;
     height: auto;
-
-
+}
+@media(min-width: 768px){
+    .body-page{
+        flex-direction: row;
+    }
 }
 h1{
     display: flex;

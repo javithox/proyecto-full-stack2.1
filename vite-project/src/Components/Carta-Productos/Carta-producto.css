@@ -1,0 +1,27 @@
+.product-card{
+    display: contents;
+    position: absolute;
+    font-size: small;
+    margin: 10px;
+    padding: 10px;
+}
+.product-img{
+    display: flex;
+    position: relative;
+    top: 270px;
+}
+.product-name{
+    display: flex;
+    position: relative;
+    top: 270px;
+}
+.product-attributes{
+    display: flex;
+    position: relative;
+    top: 270px;
+}
+.product-price{
+    display: flex;
+    position: relative;
+    top: 270px;
+}

@@ -1,0 +1,52 @@
+.main-container{
+    display: flex;
+    position: absolute;
+
+}
+.main-header{
+    display: flex;
+    position: absolute;
+}
+.contenedor-registrar{
+    display: flex;
+    position: absolute;
+    top: 140px;
+}
+.titulo-pagina{
+    color: #39ff14;
+    position: absolute;
+    top: 100px;
+    left: 280px;
+}
+.row{
+    display: flex;
+    position: absolute;
+    top: 190px;
+    font-size: larger;
+}
+.form-container{
+    position: absolute;
+    background-color: #4744445f;
+    left: -10px;
+    padding: 10px;
+    margin: 10px;
+}
+.mb-3{
+
+}
+.form-label{
+    display: flex;
+    color: #39ff14;
+    margin: 2px;
+    padding: 2px;
+}
+.btn-btn-primary{
+    color: #1E90FF;
+    background-color: #39ff14;
+    display: flex;
+}
+.texto-registrar{
+    display: flex;
+    margin: 3px;
+    padding: 3px;
+}
