@@ -14,7 +14,7 @@ const Header = () =>{
                 <Link to='/Registrar'>Registrar</Link>
                 <Link to='/Nosotros'>Nosotros</Link>
                 <Link to='/Blogs'>Blogs</Link>
-                <Link to='#'>Contacto</Link>
+                <Link to='/Contacto'>Contacto</Link>
                 <Link to='/CarritoCompras'>Carrito</Link>
 
             </nav>
