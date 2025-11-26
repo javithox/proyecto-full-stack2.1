@@ -1,49 +1,61 @@
-import { useState ,type CSSProperties } from "react";
+import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Carrito.css';
 
-
-const seccionProductos:CSSProperties={
-    display:"flex",
-    position:"absolute",
-    alignItems:'center',
-    gap:10,
-    marginTop:10,
-    top:'400px'
+interface Props {
+    name: string;
+    quantity?: number;
+    price: number;
 }
 
-interface Props{
-    name:string,
-    quantity?:number,
-    price:number
-};
+export const CarritoCompras = ({ name, quantity = 1, price }: Props) => {
+    const [count, setCount] = useState(quantity);
 
-export const CarritoCompras = ({name,quantity = 1}: Props) => {
-    const [count,setCount] = useState(quantity);
-
-    const nameProduct:CSSProperties = {
-        //width:150
-        color:count===0 ? 'red':'#39ff14',
-    };
-
-    const handlerClick = ()  =>{
-        console.log(`Click en ${name}`);
+    // Formatear precio a moneda (Ej: $100.000)
+    const formatPrice = (amount: number) => {
+        return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(amount);
     };
 
     const handleAdd = () => {
-        setCount(count+1);
+        setCount(count + 1);
     };
+
     const handleSubstract = () => {
-        if(count===1) return;
-        setCount(count-1);
+        if (count === 0) return;
+        setCount(count - 1);
     };
 
-    return(
-        <section style={seccionProductos}>
-            <span className="span-producto" style={nameProduct}>{name}</span>
-            <button style={{backgroundColor:'#39ff14'}} onClick={handleAdd}>+1</button>
-            <span style={{color:'#39ff14'}}>{count}</span>
-            <button style={{backgroundColor:'#39ff14'}} onClick={handleSubstract}>-1</button>
-        </section>
+    // Clase dinámica: Si está en 0, se pone rojo (definido en CSS)
+    const itemClass = count === 0 ? "cart-item item-empty" : "cart-item";
+    const nameClass = count === 0 ? "product-name text-empty" : "product-name";
+
+    return (
+        <div className="col-12 col-lg-8 mx-auto">
+            <div className={itemClass}>
+                
+                {/* 1. Nombre y Precio Unitario */}
+                <div className="col-12 col-md-5 mb-3 mb-md-0 text-center text-md-start">
+                    <h3 className={nameClass}>{name}</h3>
+                    <span className="product-price">Unitario: {formatPrice(price)}</span>
+                </div>
+
+                {/* 2. Controles (+ -) */}
+                <div className="col-12 col-md-4 mb-3 mb-md-0">
+                    <div className="quantity-controls">
+                        <button className="btn-qty" onClick={handleSubstract}>-</button>
+                        <span className="qty-display">{count}</span>
+                        <button className="btn-qty" onClick={handleAdd}>+</button>
+                    </div>
+                </div>
+
+                {/* 3. Subtotal Calculado */}
+                <div className="col-12 col-md-3">
+                    <div className="subtotal">
+                        Total: {formatPrice(price * count)}
+                    </div>
+                </div>
+
+            </div>
+        </div>
     );
-
 };
-
