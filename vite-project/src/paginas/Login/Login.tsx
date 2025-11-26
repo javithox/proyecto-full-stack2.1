@@ -51,11 +51,11 @@ const Login = () => {
                                 {/* Agregamos onSubmit al form */}
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-4">
-                                        <label className="texto1">USuario</label>
+                                        <label className="texto1">Usuario</label>
                                         <input 
                                             type="text" 
                                             className="form-control1" 
-                                            placeholder="Escribe tu ID..."
+                                            placeholder="Escribe tu usuario..."
                                             // Conectamos el input al estado
                                             value={usuario}
                                             onChange={(e) => setUsuario(e.target.value)}
