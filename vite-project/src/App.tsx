@@ -12,6 +12,7 @@ import Blogs3 from './paginas/Blogs/blog3';
 import Contacto from "./paginas/Contacto/contacto";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { AppCarro } from "./paginas/Carrito-Compras/AppCarro";
+import { CarritoCompras } from "./paginas/Carrito-Compras/Carrito-Compras";
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
                 <Route path="/blog3" element={<Blogs3/>}/>
                 <Route path='/Contacto' element={<Contacto/>}/>
                 <Route path="/Carrito" element={<AppCarro/>}/>
-                <Route path="/Carrito" element={<AppCarro/>}/>
+                <Route path="/Carrito-Compras" element={<CarritoCompras name="" price={0}/>}/>
            </Routes>
            <Footer/>
         </div>
