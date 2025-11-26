@@ -1,60 +1,138 @@
-.main-container{
+/* --- FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@300;500;700&display=swap');
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    background-color: #050505;
+    /* Efecto de malla (Grid) de fondo */
+    background-image: 
+        linear-gradient(rgba(30, 144, 255, 0.05) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(30, 144, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    min-height: 100vh;
+    padding: 40px 0;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
-    position: absolute;
-    top: 80px;
-    left: -300px;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative;
+    top: 150px;
+}
 
+/* --- TÍTULOS --- */
+.titulo-blog, .titulo-otros-blogs {
+    font-family: 'Orbitron', sans-serif;
+    color: #39ff14; /* Verde Neón */
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
-.titulo-blog{
-    text-align: center;
+
+.titulo-otros-blogs {
+    color: #1e90ff; /* Azul Neón para la barra lateral */
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.6);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* --- TARJETAS DE CONTENIDO (GLASSMORPHISM) --- */
+.blog-content, .sidebar-content {
+    background-color: rgba(20, 20, 20, 0.8);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
-    color: #1e90ff;
+    border-left: 3px solid #39ff14; /* Borde verde a la izquierda */
 }
-.parrafo-blog{
-    font-size: 15px;
+
+.sidebar-content {
+    border-left: 3px solid #1e90ff; /* Borde azul a la izquierda */
+}
+
+/* --- IMAGEN --- */
+.imagen-blog {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+/* --- TEXTO --- */
+.parrafo-blog {
+    font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 20px;
-    position: absolute;
+    color: #ddd;
+}
+
+/* --- FORMULARIO --- */
+.form-area textarea {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #1e90ff;
+    color: white;
     padding: 10px;
-    margin: 100px;
-    top: 0px;
-    left:50px;
-    height: 300px;
-    width: 300px;
+    border-radius: 5px;
+    resize: vertical;
+    outline: none;
+    font-family: 'Rajdhani', sans-serif;
 }
-.form-control{
-    margin-top: 20px;
-    position: absolute;
-    top: 250px;
+
+.form-area textarea:focus {
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.4);
 }
-.lista-blog{
-    list-style-type: none;
+
+.btn-enviar {
+    background-color: #1e90ff;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background-color: #39ff14; /* Cambia a verde al pasar el mouse */
+    box-shadow: 0 0 15px #39ff14;
+}
+
+/* --- LISTA DE ENLACES --- */
+.lista-blog {
+    list-style: none;
     padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 400px;
-    color: #1e90ff;
 }
-.titulo-otros-blogs{
-    margin-top: 20px;
-    position: absolute;
-    top: 350px;
-    left: 550px;
+
+.lista-blog li {
+    margin-bottom: 10px;
 }
-.blog2{
+
+.lista-blog a {
+    display: block;
+    background-color: rgba(30, 144, 255, 0.1);
+    color: white;
     text-decoration: none;
-    color: #39ff14;
-    position: absolute;
-    top: 40px;
-    left:393px
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    font-weight: bold;
 }
-.blog3{
-    text-decoration: none;
+
+.lista-blog a:hover {
+    border-color: #39ff14;
     color: #39ff14;
-    position: absolute;
-    top: 90px;
-    left: 393px;
+    text-shadow: 0 0 5px #39ff14;
+    background-color: rgba(57, 255, 20, 0.1);
 }

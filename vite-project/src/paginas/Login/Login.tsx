@@ -1,42 +1,78 @@
-import React from "react";
-import './Login.css'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Login.css';
 
 const Login = () => {
-    return(
-        <main className="main-container">
-            <section className="main-header bg-black">
-                
-                <div className="contenedor-iniciar">
-                    <div className="justify-content-center">
-                        <h1 className="titulo-iniciar" style={{color:' #39ff14'}}>Iniciar Sesion</h1>
-                    </div>
-                    <div className="row justify-content-center">
-                        <div className="col-md6 col-lg-5">
-                            <form action="#" method="post" className="p-4 border rounded bg-light shadow-sm">
-                                <div className="mb-3">
-                                    <label htmlFor="username" className="form-label">Nombre de Usuario</label>
-                                    <input type="text" id="username" className="form-control1" placeholder="Ingresa tu nombre de usuario" required autoComplete="username"/>
-                                </div>
+    return (
+        <div className="main-container">
+            
+            {/* NAVBAR SIEMPRE VISIBLE (SIN COLAPSABLE) */}
+            <nav className="navbar neon-navbar">
+                <div className="container-fluid d-flex flex-column flex-md-row align-items-center">
+                    
+                    {/* LOGO: Margen inferior en móvil (mb-2), margen derecho automático en PC (me-md-auto) */}
+                    <a className="navbar-brand neon-brand mb-2 mb-md-0 me-md-auto" href="#">
+                        GAMER ZONE
+                    </a>
+                    
+                    {/* ENLACES: Lista flexible simple */}
+                    <ul className="nav justify-content-center">
+                        <li className="nav-item">
+                            <a className="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Productos</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Registro</a>
+                        </li>
+                    </ul>
 
-                                <div className="mb-3">
-                                    <label htmlFor="password" className="form-label">Contraseña</label>
-                                    <input type="password" id="password" name="password" className="form-control2" placeholder="Ingresa tu Contraseña" required autoComplete="current-password"/>
-                                </div>
+                </div>
+            </nav>
 
-                                <div className="d-grid mb-3">
-                                    <button type="submit" className="btn-btn-primary"style={{backgroundColor: '#1e90ff', color:'#39ff14'}}>Iniciar Sesion</button>
-                                </div>
+            {/* CONTENIDO CENTRADO */}
+            <div className="content-wrapper">
+                <div className="container">
+                    <div className="row justify-content-center align-items-center">
+                        
+                        {/* COLUMNAS RESPONSIVE */}
+                        <div className="col-12 col-md-8 col-lg-5 col-xl-4">
+                            
+                            <h1 className="titulo-iniciar">LOGIN SYSTEM</h1>
 
-                                <div className="text-center">
-                                    <a href="registro.html" className="texto1 text-decoration-none" style={{color:'#39ff14'}}>¿Has olvidado la contraseña?</a>
-                                </div>
-                            </form>
+                            <div className="contenedor-iniciar">
+                                <form>
+                                    <div className="mb-4">
+                                        <label className="texto1">ID DE USUARIO</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control1" 
+                                            placeholder="Escribe tu ID..." 
+                                        />
+                                    </div>
+
+                                    <div className="mb-4">
+                                        <label className="texto1">CÓDIGO DE ACCESO</label>
+                                        <input 
+                                            type="password" 
+                                            className="form-control2" 
+                                            placeholder="••••••••" 
+                                        />
+                                    </div>
+
+                                    <button type="submit" className="btn-iniciar">
+                                        ACCEDER
+                                    </button>
+                                </form>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </div>
     );
-};
+}
 
 export default Login;

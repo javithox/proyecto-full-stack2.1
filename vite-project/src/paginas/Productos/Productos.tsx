@@ -1,8 +1,9 @@
 import React from "react";
-import CartaProductos from "../../Components/Carta-Productos/Carta-Productos";
-import { CarritoCompras } from "../Carrito-Compras/Carrito-Compras";
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importamos Bootstrap
+import CartaProductos from "../../Components/Carta-Productos/Carta-Productos"; // Ajusta la ruta si es necesario
+import './producto.css';
 
-const Productos = [
+const listaProductos = [
     {
         id:1,
         name: 'GPU',
@@ -69,24 +70,38 @@ const Productos = [
     }
 ];
 
-const productos = () => {
+const Productos = () => {
     return(
-        <main className="product-grid">
-            <h1 style={{color:'#39ff14', position:"absolute", top:'150px'}}>Productos</h1>
-            <ul className="product-list">
-                {Productos.map(Productos => (
-                    <li key={Productos.id} className="product-card">
-                        <CartaProductos
-                            image={Productos.image}
-                            name={Productos.name}
-                            attributes={Productos.attributes}
-                            price={Productos.price}
-                        />
-                    </li>
-                ))}
+        <main className="product-page-bg">
+            <div className="container py-5">
+                
+                {/* Título de la Sección */}
+                <div className="row mb-5">
+                    <div className="col-12 text-center">
+                        <h1 className="titulo-seccion">PRODUCTOS DESTACADOS</h1>
+                    </div>
+                </div>
 
-            </ul>
+                {/* Rejilla de Productos */}
+                <div className="row">
+                    {listaProductos.map((prod) => (
+                        /* RESPONSIVE:
+                           - col-12: Móvil (ancho completo)
+                           - col-md-6: Tablet (mitad de pantalla)
+                           - col-lg-4: PC (tercio de pantalla)
+                        */
+                        <div key={prod.id} className="col-12 col-md-6 col-lg-4 mb-4">
+                            <CartaProductos
+                                image={prod.image}
+                                name={prod.name}
+                                attributes={prod.attributes}
+                                price={prod.price}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
         </main>
     );
 };
-export default productos;
+export default Productos;

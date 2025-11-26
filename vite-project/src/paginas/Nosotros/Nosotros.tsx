@@ -1,30 +1,58 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener Bootstrap
 import "./Nosotros.css";
 
 const Nosotros = () => {
     return(
-        <main className="main-container">
-            <section className="main-header">
-                <div className="informacion-nosotros">
-                    <h1 className="titulo-nosotros">Sobre nosotros</h1>
+        <main className="about-section">
+            <div className="container">
+                
+                {/* 1. TÍTULO PRINCIPAL */}
+                <div className="row mb-5">
+                    <div className="col-12">
+                        <h1 className="titulo-nosotros">SOBRE NOSOTROS</h1>
+                    </div>
                 </div>
 
-                <div className="Contenido">
-                    <p className="parrafo1">Esta pagina se encarga de vender productos abuenos precios imperdibles todo a buenos descuentos para todo tipo de jugadores gamers de las gamas</p>
-
+                {/* 2. PRIMER PÁRRAFO (Centrado) */}
+                <div className="row justify-content-center mb-5">
+                    <div className="col-12 col-md-10 col-lg-8">
+                        <div className="text-box">
+                            <p className="texto-neon">
+                                Esta página se encarga de vender productos a <strong>buenos precios imperdibles</strong>, 
+                                todo con buenos descuentos para todo tipo de jugadores gamers de todas las gamas.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </section>
 
-            <section className="main-header">
-                <div className="informacion-nosotros">
-                    <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcFlV23kXbZhlWT0Q_cA-npNzq64SmklufWw&s" alt="logo" className="imagen-nosotros"/>
-                        <p className="parrafo2">Esta comunidad esta atenta a los sucesos o hecho que ocurren en los juegos y a la experiencia de lo jugador</p>
+                {/* 3. SECCIÓN IMAGEN + TEXTO */}
+                <div className="row align-items-center">
+                    
+                    {/* Columna Imagen (Izquierda en PC, Arriba en Móvil) */}
+                    <div className="col-12 col-md-6 mb-4 mb-md-0 text-center">
+                        <img 
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcFlV23kXbZhlWT0Q_cA-npNzq64SmklufWw&s" 
+                            alt="Comunidad Gamer" 
+                            className="img-fluid imagen-nosotros" 
+                        />
+                    </div>
+
+                    {/* Columna Texto (Derecha en PC, Abajo en Móvil) */}
+                    <div className="col-12 col-md-6">
+                        <div className="text-box">
+                            <p className="texto-neon">
+                                Esta comunidad está atenta a los sucesos o hechos que ocurren en los juegos y a la 
+                                <strong> experiencia del jugador</strong>. Nos dedicamos a traer lo mejor del mundo gaming.
+                            </p>
+                        </div>
                     </div>
 
                 </div>
-            </section>
+
+            </div>
         </main>
     );
 };
+
 export default Nosotros;

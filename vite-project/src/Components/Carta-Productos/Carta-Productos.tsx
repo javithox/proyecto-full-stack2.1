@@ -1,19 +1,39 @@
-import React, { type CSSProperties } from "react";
-import './Carta-producto.css'
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener Bootstrap importado
+import './Carta-producto.css';
 
-const estiloCarta:CSSProperties={
-    color:'#39ff14',
-    padding:'10px',
-    margin:'10px'
+// Si usas TypeScript, define la interfaz (opcional)
+interface CartaProps {
+    image: string;
+    name: string;
+    attributes: string;
+    price: string;
 }
 
-const CartaProductos = ({ image, name, attributes, price}) => {
-    return(
-        <div className="product-card">
-            <img className="product-img" src={image} alt={name} height='40%' width='40%'/>
-            <p style={estiloCarta} className="product-name">{name}</p>
-            <p style={estiloCarta} className="product-attributes">{attributes}</p>
-            <p style={estiloCarta} className="product-price">{price}</p>
+const CartaProductos = ({ image, name, attributes, price }: CartaProps) => {
+    return (
+        // Clase 'h-100' de Bootstrap asegura que ocupe toda la altura de la columna
+        <div className="card product-card h-100">
+            
+            <img 
+                src={image} 
+                className="card-img-top product-img" 
+                alt={name} 
+            />
+            
+            <div className="card-body d-flex flex-column">
+                <h5 className="card-title product-name">{name}</h5>
+                <p className="card-text product-attributes">{attributes}</p>
+                
+                {/* Sección inferior (Precio y Botón) siempre alineada al fondo */}
+                <div className="mt-auto">
+                    <span className="product-price">{price}</span>
+                    <button className="btn btn-neon w-100">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
         </div>
     );
 };

@@ -1,50 +1,61 @@
 import React from 'react';
-import './Regisrtar.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Regisrtar.css'; // Tu CSS corregido
 
-
-const Registrar = () =>{
-    return(
-        <main className='main-container'>
-            <section className='main-header bg-black'>
-                <div className='contenedor-registrar'>
+const Registrar = () => {
+  return (
+    <div className="main-container">
+        
+        {/* Contenedor Bootstrap para la grilla */}
+        <div className="container">
+            <div className="row justify-content-center">
+                
+                {/* COLUMNAS RESPONSIVE:
+                    - Móvil (col-12): Ocupa toda la pantalla.
+                    - Tablet (col-md-8): Un poco más angosto.
+                    - PC (col-lg-5): Centrado y elegante.
+                */}
+                <div className="col-12 col-md-8 col-lg-5">
                     
-                    <div className='justify-content-center'>
-                        <h1 className='titulo-pagina'>Registrarse</h1>
+                    <div className="contenedor-registrar">
+                         <h1 className="titulo-pagina">REGISTRAR USUARIO</h1>
                     </div>
 
-                    <div className='row justify-content-center'>
-                        <div className='col-md-6 col-lg-5'>
-                            <form action="#" method='post' className='form-container p-4 border rounded bg-light shadow-sm'>
-                                <div className='mb-3'>
-                                    <label htmlFor="username" className='form-label'>Nombre de Usuario</label>
-                                    <input type="text" id='username' className='form-control1' placeholder='Ingrese su nombre de usuario' required autoComplete='username' />
-                                </div>
-
-                                <div className='mb-3'>
-                                    <label htmlFor="username" className='form-label'>Correo</label>
-                                    <input type="text" id='Email' className='form-control2' placeholder='Ingrese su Correo' />
-                                </div>
-
-                                <div className='mb-3'>
-                                    <label htmlFor="password" className='form-label'>Contraseña</label>
-                                    <input type="password" id='password' name='password' className='form-control3' placeholder='Ingrese su contraseña' required autoComplete='current-password' />
-                                </div>
-
-                                <div className='d-grid mb-3'>
-                                    <button type='submit' className='btn-btn-primary'>Registrarse</button>
-                                </div>
-                                <div className='text-center'>
-                                    <a href="login.html" className='texto-registrar' style={{color: '#39ff14'}}>¿Ya tienes cuenta? Iniciar Sesión.</a>
-                                </div>
-                                
-                            </form>
+                    <form className="form-container">
+                        
+                        {/* Input Nombre */}
+                        <div className="mb-3">
+                            <label className="form-label">Nombre</label>
+                            <input type="text" className="form-control1" placeholder="Ingresa tu nombre" />
                         </div>
 
-                    </div>
-                </div>
+                        {/* Input Email */}
+                        <div className="mb-3">
+                            <label className="form-label">Correo Electrónico</label>
+                            <input type="email" className="form-control2" placeholder="ejemplo@correo.com" />
+                        </div>
 
-            </section>
-        </main>
-    );
+                        {/* Input Password */}
+                        <div className="mb-3">
+                            <label className="form-label">Contraseña</label>
+                            <input type="password" className="form-control3" placeholder="********" />
+                        </div>
+
+                        {/* Botón */}
+                        <button type="submit" className="btn-btn-primary">
+                            REGISTRARSE
+                        </button>
+                        
+                        <a href="/login" className="texto-registrar">
+                            ¿Ya tienes cuenta? Inicia sesión
+                        </a>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  );
 };
+
 export default Registrar;

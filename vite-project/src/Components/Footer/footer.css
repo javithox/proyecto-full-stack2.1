@@ -1,62 +1,93 @@
-.footer-container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 900px;
-}
-.nombre-sitio{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    color: #39ff14;
-    bottom: 100px;
-    font-size: xx-large;
-}
-.informacion-adicional{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    color: #39ff14;
-    top: 120px;
-}
-.footer-nav{
-    display: contents;
-    flex-direction: column;
-    position: absolute;
-    margin: 1px;
-    text-decoration: none;
-}
-.nav-footer-container{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    margin: 3px;
-    padding: 3px;
-}
-.texto-footer{
-    display: flex;
-    flex-direction: column;
-    color: #39ff14;
-    text-decoration: none;
-    text-transform: capitalize;
+/* --- FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@300;500;700&display=swap');
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.footer-section {
+    background-color: #050505; /* Fondo negro profundo */
+    /* Malla sutil de fondo */
+    background-image: 
+        linear-gradient(rgba(57, 255, 20, 0.03) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(57, 255, 20, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
     
+    border-top: 3px solid #39ff14; /* Borde superior Neón */
+    padding: 60px 0 20px 0;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: auto; /* Empuja el footer al final si usas flex en el body */
+    width: 100%;
 }
 
-.subscribe-button{
-    background-color: #1E90FF;
-}
-@media(min-width:768px){
-    .footer-container{
-        flex-direction: row;
-    }
-    .nombre-sitio{
-        flex-direction: row;
-    }
-    .informacion-adicional{
-        flex-direction: row;
-    }
-    .footer-nav{
-        flex-direction: row;
-    }
+/* --- COLUMNA 1: MARCA --- */
+.footer-brand {
+    font-family: 'Orbitron', sans-serif;
+    color: #39ff14;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+    margin-bottom: 10px;
+    display: block;
 }
 
+.footer-desc {
+    color: #aaa;
+    font-size: 1rem;
+    max-width: 300px;
+    margin: 0 auto 20px auto; /* Centrado en móvil */
+}
+
+/* En PC alineamos a la izquierda */
+@media (min-width: 768px) {
+    .footer-desc { margin: 0 0 20px 0; }
+}
+
+/* --- COLUMNA 2: ENLACES --- */
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin-bottom: 12px;
+}
+
+.texto-footer {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.texto-footer:hover {
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14;
+    padding-left: 10px; /* Pequeño desplazamiento a la derecha */
+}
+
+/* --- COLUMNA 3: NEWSLETTER --- */
+.newsletter-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #1e90ff; /* Azul Neón */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #555;
+    padding: 10px;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+}
