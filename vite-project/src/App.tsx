@@ -31,7 +31,11 @@ function App() {
                 <Route path="/blog3" element={<Blogs3/>}/>
                 <Route path='/Contacto' element={<Contacto/>}/>
                 <Route path="/Carrito" element={<AppCarro/>}/>
-                <Route path="/Carrito-Compras" element={<CarritoCompras name="" price={0}/>}/>
+                <Route path="/Carrito-Compras" element={<CarritoCompras name="" price={0} quantity={0} onAdd={function (): void {
+            throw new Error("Function not implemented.");
+          } } onSubstract={function (): void {
+            throw new Error("Function not implemented.");
+          } }/>}/>
            </Routes>
            <Footer/>
         </div>
