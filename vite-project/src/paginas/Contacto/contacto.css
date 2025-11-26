@@ -1,70 +1,132 @@
-.contenedor{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    top: 200px;
-    left: 200px;
-    width: 50%;
-    height: auto;
+/* --- FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@300;500;700&display=swap');
+
+/* --- FONDO PRINCIPAL --- */
+.contact-section {
+    background-color: #050505;
+    /* Efecto Grid de fondo */
+    background-image: 
+        linear-gradient(rgba(30, 144, 255, 0.05) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(30, 144, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    min-height: 100vh;
+    padding: 40px 0;
+    width: 100%;
+    color: white;
 }
-.titulo-contacto{
-    color: #1e90ff;
+
+/* --- TÍTULO --- */
+.titulo-contacto {
+    font-family: 'Orbitron', sans-serif;
+    color: #1e90ff; /* Azul Neón */
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
+}
+
+/* --- CAJA DEL FORMULARIO --- */
+.form-box {
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 1px solid #1e90ff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.2);
+}
+
+.form-label {
+    font-family: 'Rajdhani', sans-serif;
+    color: #39ff14; /* Verde Neón */
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* --- INPUTS Y TEXTAREA --- */
+.form-input {
+    background-color: #111;
+    border: 1px solid #333;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
     margin-bottom: 20px;
+    outline: none;
+    font-family: 'Rajdhani', sans-serif;
+    transition: 0.3s;
 }
-.formulario{
-    display: contents;
-    align-items: center;
+
+.form-input:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.4);
+    background-color: #1a1a1a;
+}
+
+/* --- BOTÓN --- */
+.btn-enviar {
+    background-color: #1e90ff;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #39ff14; /* Cambia a verde */
+    color: black;
+    box-shadow: 0 0 15px #39ff14;
+}
+
+/* --- CAJA DE INFORMACIÓN (Lado derecho) --- */
+.info-box {
+    background-color: rgba(20, 20, 20, 0.8);
+    border-left: 4px solid #39ff14;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
 }
-.nombre-campo, .email-campo, .mensaje-campo{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+
+.info-title {
+    font-family: 'Orbitron', sans-serif;
     color: #39ff14;
-}
-.informacion-contacto{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 315px;
-    color: #39ff14;
-}
-@media (max-width: 600px){
-    .contenedor{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    top: 200px;
-    left: 200px;
-}
-.titulo-contacto{
-    color: #1e90ff;
     margin-bottom: 20px;
+    font-size: 1.5rem;
 }
-.formulario{
-    display: contents;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-.nombre-campo, .email-campo, .mensaje-campo{
-    display: flex;
-    flex-direction: column;
+
+.info-text {
+    font-family: 'Rajdhani', sans-serif;
+    color: #ccc;
+    font-size: 1.1rem;
     margin-bottom: 15px;
+}
+
+.info-text strong {
+    color: #1e90ff;
+}
+
+.info-text a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.info-text a:hover {
     color: #39ff14;
 }
-.informacion-contacto{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 315px;
-    color: #39ff14;
-}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+    .titulo-contacto { font-size: 2rem; }
+    .info-box { margin-top: 30px; border-left: none; border-top: 4px solid #39ff14; }
 }
