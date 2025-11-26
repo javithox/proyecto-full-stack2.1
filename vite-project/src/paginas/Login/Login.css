@@ -3,7 +3,7 @@
 
 /* --- FONDO CYBER-GRID --- */
 .main-container {
-    background-color: #050505;
+    background-color: #bc0606;
     /* Cuadrícula verde tenue */
     background-image: 
         linear-gradient(rgba(57, 255, 20, 0.03) 1px, transparent 1px), 
@@ -37,7 +37,7 @@
 }
 
 .nav-link {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     color: #ccc !important;
     font-size: 1.1rem;
     font-weight: 600;
@@ -82,7 +82,7 @@
 /* --- TÍTULO --- */
 .titulo-iniciar {
     font-family: 'Orbitron', sans-serif;
-    color: white;
+    color: #1e99ff;
     font-size: 3rem;
     font-weight: 900;
     text-align: center;

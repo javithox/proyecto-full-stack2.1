@@ -13,10 +13,10 @@ app.use(express.json()); // Permite recibir JSON del frontend
 
 // Configuración de PostgreSQL
 const pool = new Pool({
-  user: process.env.DB_USER || 'postgres',
-  host: process.env.DB_HOST || 'localhost',
-  database: process.env.DB_NAME || 'gamerzone_db', // Tu base de datos
-  password: process.env.DB_PASSWORD || 'tu_contraseña',
+  user: process.env.DB_USER || 'levelup_admin',
+  host: process.env.DB_HOST || 'jdbc:postgresql://levelup-db.cyiy9wonqxdz.us-east-1.rds.amazonaws.com',
+  database: process.env.DB_NAME || 'levelup-db', // Tu base de datos
+  password: process.env.DB_PASSWORD || 'javithox2025',
   port: process.env.DB_PORT || 5432,
 });
 

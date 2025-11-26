@@ -8,7 +8,7 @@ const Registrar = () => {
         
         {/* Contenedor Bootstrap para la grilla */}
         <div className="container">
-            <div className="row justify-content-center">
+            <div className="row justify-content-center ">
                 
                 {/* COLUMNAS RESPONSIVE:
                     - Móvil (col-12): Ocupa toda la pantalla.
