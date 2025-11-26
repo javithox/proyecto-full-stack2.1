@@ -19,7 +19,7 @@ const Footer = () => {
 
                     {/* COLUMNA 2: ENLACES RÁPIDOS */}
                     <div className="col-12 col-md-4 mb-4 mb-md-0">
-                        <h4 className="newsletter-title" style={{color:'#fff'}}>ENLACES</h4>
+                        <h4 className="newsletter-title" style={{color:'#1e90ff'}}>ENLACES</h4>
                         <ul className="footer-nav">
                             <li><a href="#" className="texto-footer">Política de Privacidad</a></li>
                             <li><a href="#" className="texto-footer">Términos de Servicio</a></li>
@@ -30,7 +30,7 @@ const Footer = () => {
                     {/* COLUMNA 3: NEWSLETTER */}
                     <div className="col-12 col-md-4">
                         <h4 className="newsletter-title">NEWSLETTER</h4>
-                        <p style={{color:'#aaa', fontSize:'0.9rem'}}>Recibe las últimas noticias y códigos de regalo.</p>
+                        <p style={{color:'#39ff14', fontSize:'0.9rem'}}>Recibe las últimas noticias y códigos de regalo.</p>
                         
                         <div className="newsletter-form">
                             <input 

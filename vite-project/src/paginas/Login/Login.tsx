@@ -5,32 +5,6 @@ import './Login.css';
 const Login = () => {
     return (
         <div className="main-container">
-            
-            {/* NAVBAR SIEMPRE VISIBLE (SIN COLAPSABLE) */}
-            <nav className="navbar neon-navbar">
-                <div className="container-fluid d-flex flex-column flex-md-row align-items-center">
-                    
-                    {/* LOGO: Margen inferior en móvil (mb-2), margen derecho automático en PC (me-md-auto) */}
-                    <a className="navbar-brand neon-brand mb-2 mb-md-0 me-md-auto" href="#">
-                        GAMER ZONE
-                    </a>
-                    
-                    {/* ENLACES: Lista flexible simple */}
-                    <ul className="nav justify-content-center">
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#">Inicio</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Productos</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Registro</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </nav>
-
             {/* CONTENIDO CENTRADO */}
             <div className="content-wrapper">
                 <div className="container">

@@ -4,7 +4,6 @@
 /* --- CONTENEDOR PRINCIPAL --- */
 .cart-section {
     background-color: #050505;
-    /* Fondo de malla */
     background-image: 
         linear-gradient(rgba(57, 255, 20, 0.03) 1px, transparent 1px), 
         linear-gradient(90deg, rgba(57, 255, 20, 0.03) 1px, transparent 1px);
@@ -30,14 +29,13 @@
 .cart-item {
     background-color: rgba(20, 20, 20, 0.9);
     border: 1px solid #333;
-    border-left: 4px solid #39ff14; /* Borde verde lateral */
+    border-left: 4px solid #39ff14;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 15px;
     transition: 0.3s;
     display: flex;
     align-items: center;
-    /* Glassmorphism */
     backdrop-filter: blur(5px);
 }
 
@@ -102,17 +100,31 @@
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #1e90ff; /* Azul eléctrico */
+    color: #1e90ff;
     text-align: right;
 }
 
-/* --- ESTADO VACÍO (ROJO) --- */
+/* --- ESTADO VACÍO --- */
 .item-empty {
     border-left-color: red !important;
     opacity: 0.6;
 }
 .text-empty {
     color: red !important;
+}
+
+/* --- NUEVA CLASE: TOTAL FINAL --- */
+.total-final {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #1e90ff;
+    text-shadow: 0 0 20px rgba(30, 144, 255, 0.5);
+    font-weight: bold;
+    background-color: rgba(20,20,20, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1e90ff;
+    display: inline-block;
 }
 
 /* Ajustes Móviles */
